@@ -22,7 +22,7 @@ function since($timestamp)
 }
 
 ?>
-<h2><?php echo $this->ini['inst']; ?></h2>
+<h2><?php if(isset($this->ini['inst'])) echo $this->ini['inst']; ?></h2>
 <?php if($this->request->api('me') != 'anonymous' && false): ?>
 <form action="%post%" method="post" class="add_thread">
 	<textarea name="input"></textarea>
